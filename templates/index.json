@@ -7,9 +7,18 @@
         "featured_collection": "",
         "number_of_products_to_show": 4
       }
+    },
+    "featured_collection_TTHhpB": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured Collection",
+        "featured_collection": "",
+        "number_of_products_to_show": 4
+      }
     }
   },
   "order": [
-    "featured-collection"
+    "featured-collection",
+    "featured_collection_TTHhpB"
   ]
 }
