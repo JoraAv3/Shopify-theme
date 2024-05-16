@@ -1,16 +1,4 @@
 {
-<<<<<<< HEAD
-    "sections": {
-        "featured-collection": {
-            "type": "featured-collection",
-            "settings": {
-                "featured_collection": "all"
-            }
-        }
-    },
-    "order": ["featured-collection"]
-}
-=======
   "sections": {
     "featured-collection": {
       "type": "featured-collection",
@@ -25,4 +13,3 @@
     "featured-collection"
   ]
 }
->>>>>>> 094fb6fa80f17d10aee244ea53b4e591f369cafe
