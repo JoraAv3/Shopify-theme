@@ -1,16 +1,17 @@
 <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="moonGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-      <stop offset="0%" style="stop-color: #f0f0f0; stop-opacity: 1" />
-      <stop offset="100%" style="stop-color: #b0b0b0; stop-opacity: 1" />
+      <stop offset="0%" style="stop-color: #e0e0e0; stop-opacity: 1" />
+      <stop offset="100%" style="stop-color: #a0a0a0; stop-opacity: 1" />
     </radialGradient>
-    <filter id="moonTexture" x="0" y="0">
-      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" result="noise" />
-      <feDiffuseLighting in="noise" lighting-color="#ffffff" surfaceScale="2">
-        <feDistantLight azimuth="45" elevation="60" />
-      </feDiffuseLighting>
-      <feComposite in2="SourceGraphic" operator="in" />
+    <filter id="moonTexture">
+      <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="1.5" />
     </filter>
+    <mask id="moonMask">
+      <circle cx="100" cy="100" r="80" fill="white" />
+    </mask>
   </defs>
-  <circle cx="100" cy="100" r="80" fill="url(#moonGradient)" filter="url(#moonTexture)" />
+  <circle cx="100" cy="100" r="80" fill="url(#moonGradient)" filter="url(#moonTexture)" mask="url(#moonMask)" />
 </svg>
